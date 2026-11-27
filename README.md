@@ -75,14 +75,3 @@ python3 projects/agy_monitor/tools/mac_sync/agy_mosaico_sync.py
 - `--dry-run`：仅打印下发 JSON，不连接硬件或开启端口
 
 ---
-
-## 5. IDEA 社区 `.irisfw` 固件包与目录结构
-
-- **预编译 `.irisfw` 固件包**：`publish/agy_monitor-1.0.0.irisfw`（本地打包输出，不随源码提交；可直接上传至 ESP-Mosaico IDEA 社区）。
-- **主要目录**：
-  - `main/`：ESP32-S31 应用入口、ESP-Iris 自定义 RPC (`0x4147`) 注册、AI 按键与震动反馈
-  - `components/app_agy_ui/`：480×480 黑底白字 GSP 界面、JSON 协议解析、纯整数时钟及 PC 模拟器适配器
-  - `components/app_agy_net/`：USB 优先判断、Wi-Fi STA 自动重连、UDP 发现与 HTTP 拉取
-  - `components/app_display/`：CO5300 显示与触摸板初始化
-  - `tools/mac_sync/`：Mac 端 `/statusline` 桥接、USB/Wi-Fi 双模同步守护脚本与单元测试
-  - `tests/`：纯 C 协议解析与时钟单元测试
